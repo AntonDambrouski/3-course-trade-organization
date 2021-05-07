@@ -90,4 +90,4 @@ D:\Develop\TradeOrgCon\TradeOrgCon\bin\Debug\TradeOrgCon.exe.config
 D:\Develop\TradeOrgCon\TradeOrgCon\bin\Debug\TradeOrgCon.exe
 D:\Develop\TradeOrgCon\TradeOrgCon\bin\Debug\TradeOrgCon.pdb
 D:\Develop\TradeOrgCon\TradeOrgCon\obj\Debug\TradeOrgCon.Additional_buttons.InputEmailForm.resources
-D:\Develop\TradeOrgCon\TradeOrgCon\obj\Debug\TradeOrgCon.csprojAssemblyReference.cache
+D:\Develop\TradeOrgCon\TradeOrgCon\obj\Debug\TradeOrgCon.About.resources

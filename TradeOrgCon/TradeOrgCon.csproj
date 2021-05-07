@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>follow-me %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
@@ -66,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms about\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms about\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddForm\AddClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +147,7 @@
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
     <Compile Include="Authorization\CheckInputAndLoadForm.cs" />
+    <Compile Include="Forms about\RestoreAboutFile.cs" />
     <Compile Include="Main form\Administration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +172,9 @@
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Registration\RegistrUserInDataBase.cs" />
+    <EmbeddedResource Include="Forms about\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddForm\AddClientForm.resx">
       <DependentUpon>AddClientForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +219,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Registration\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
@@ -226,10 +240,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="AddForms\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="follow-me %281%29.ico" />
+    <None Include="Resources\follow-me %281%29.ico" />
     <Content Include="TradeOrganization.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -29,6 +29,7 @@ namespace TradeOrgCon.Additional_buttons
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputEmailForm));
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCnsl = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@ namespace TradeOrgCon.Additional_buttons
             // buttonCnsl
             // 
             this.buttonCnsl.BackColor = System.Drawing.Color.AliceBlue;
+            this.buttonCnsl.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCnsl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCnsl.Location = new System.Drawing.Point(154, 98);
             this.buttonCnsl.Name = "buttonCnsl";
@@ -78,9 +80,11 @@ namespace TradeOrgCon.Additional_buttons
             // 
             // InputEmailForm
             // 
+            this.AcceptButton = this.buttonOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
+            this.CancelButton = this.buttonCnsl;
             this.ClientSize = new System.Drawing.Size(272, 142);
             this.ControlBox = false;
             this.Controls.Add(this.textBoxEmail);
@@ -88,6 +92,7 @@ namespace TradeOrgCon.Additional_buttons
             this.Controls.Add(this.buttonCnsl);
             this.Controls.Add(this.buttonOk);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "InputEmailForm";

@@ -7,7 +7,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 
 namespace TradeOrgCon.Main_form
 {
@@ -453,7 +453,7 @@ namespace TradeOrgCon.Main_form
                 if (inputEmail.ShowDialog() == DialogResult.OK)
                 {
                     Additional_buttons.SendTableOnEmail.IsValidEmail(inputEmail.textBoxEmail.Text);
-                    Additional_buttons.SendTableOnEmail.SendEmail(dataGridView1);
+                    Additional_buttons.SendTableOnEmail.SendEmail(dataGridView1, inputEmail.textBoxEmail.Text);
                 }
             }
             catch (Exception ex)
@@ -471,6 +471,47 @@ namespace TradeOrgCon.Main_form
         {
             System.Diagnostics.Process.Start("TradeOrgCon.exe");
             this.Close();
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
+
+        private void buttonChangeFont_Click(object sender, EventArgs e)
+        {
+            if (buttonChangeFont.Text == "Увеличить")
+            {
+                buttonDel.Font = buttonPrint.Font = buttonSaveInWord.Font = buttonSendEmail.Font = buttonAdd.Font = new Font("Consolas", 12);
+                buttonSendEmail.Font = new Font("Consolas", 11);
+                groupBoxChsDataBy.Font = groupBoxSearch.Font = dataGridView1.Font = new Font("Consolas", 14);
+                comboBoxSearchBy.Font = comboBoxSrchRange.Font = textBoxChsFrom.Font = textBoxChsTo.Font = textBoxValToSearch.Font = new Font("Consolas", 14);
+            }
+            else
+            {
+                buttonDel.Font = buttonPrint.Font = buttonSaveInWord.Font = buttonSendEmail.Font = buttonAdd.Font = new Font("Consolas", 9);
+                groupBoxChsDataBy.Font = groupBoxSearch.Font = new Font("Consolas", 12);
+                dataGridView1.Font = new Font("Consolas", 10);
+                comboBoxSearchBy.Font = comboBoxSrchRange.Font = textBoxChsFrom.Font = textBoxChsTo.Font = textBoxValToSearch.Font = new Font("Consolas", 12);
+
+            }
+
+            buttonChangeFont.Text = buttonChangeFont.Text == "Увеличить" ? "Уменьшить" : "Увеличить";
+        }
+
+        private void buttonAboutProgram_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!File.Exists("Readme.txt"))
+                {
+                    Forms_about.RestoreAboutFile.CreateReadMeFile();
+                }
+
+                System.Diagnostics.Process.Start("Readme.txt");
+            }
+            catch (Exception) {/*nothing*/};
         }
     }
 }

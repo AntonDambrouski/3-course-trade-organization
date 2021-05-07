@@ -66,6 +66,9 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.linkLabelChangeAccount = new System.Windows.Forms.LinkLabel();
+            this.buttonChangeFont = new System.Windows.Forms.Button();
+            this.buttonAbout = new System.Windows.Forms.Button();
+            this.buttonAboutProgram = new System.Windows.Forms.Button();
             this.panelWorkSpace.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -105,7 +108,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
@@ -117,6 +120,7 @@
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.Size = new System.Drawing.Size(1039, 482);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             // 
             // menuStrip1
@@ -137,7 +141,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(142, 662);
-            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // поставщикиToolStripMenuItem
@@ -262,6 +266,7 @@
             // 
             // groupBoxChsDataBy
             // 
+            this.groupBoxChsDataBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxChsDataBy.Controls.Add(this.ErrorChsLabel);
             this.groupBoxChsDataBy.Controls.Add(this.textBoxChsTo);
             this.groupBoxChsDataBy.Controls.Add(this.labelChsTo);
@@ -273,7 +278,7 @@
             this.groupBoxChsDataBy.Location = new System.Drawing.Point(577, 3);
             this.groupBoxChsDataBy.Name = "groupBoxChsDataBy";
             this.groupBoxChsDataBy.Size = new System.Drawing.Size(453, 169);
-            this.groupBoxChsDataBy.TabIndex = 6;
+            this.groupBoxChsDataBy.TabIndex = 3;
             this.groupBoxChsDataBy.TabStop = false;
             this.groupBoxChsDataBy.Text = "Критерий выборки данных";
             // 
@@ -296,7 +301,7 @@
             this.textBoxChsTo.Location = new System.Drawing.Point(196, 67);
             this.textBoxChsTo.Name = "textBoxChsTo";
             this.textBoxChsTo.Size = new System.Drawing.Size(100, 25);
-            this.textBoxChsTo.TabIndex = 8;
+            this.textBoxChsTo.TabIndex = 10;
             this.textBoxChsTo.EnabledChanged += new System.EventHandler(this.textBoxChsFrom_EnabledChanged);
             this.textBoxChsTo.TextChanged += new System.EventHandler(this.textBoxChsFrom_TextChanged);
             // 
@@ -317,7 +322,7 @@
             this.textBoxChsFrom.Location = new System.Drawing.Point(44, 66);
             this.textBoxChsFrom.Name = "textBoxChsFrom";
             this.textBoxChsFrom.Size = new System.Drawing.Size(100, 25);
-            this.textBoxChsFrom.TabIndex = 6;
+            this.textBoxChsFrom.TabIndex = 9;
             this.textBoxChsFrom.EnabledChanged += new System.EventHandler(this.textBoxChsFrom_EnabledChanged);
             this.textBoxChsFrom.TextChanged += new System.EventHandler(this.textBoxChsFrom_TextChanged);
             // 
@@ -337,7 +342,7 @@
             this.comboBoxSrchRange.Location = new System.Drawing.Point(92, 29);
             this.comboBoxSrchRange.Name = "comboBoxSrchRange";
             this.comboBoxSrchRange.Size = new System.Drawing.Size(121, 26);
-            this.comboBoxSrchRange.TabIndex = 4;
+            this.comboBoxSrchRange.TabIndex = 8;
             this.comboBoxSrchRange.SelectedIndexChanged += new System.EventHandler(this.comboBoxSrchRange_SelectedIndexChanged);
             this.comboBoxSrchRange.EnabledChanged += new System.EventHandler(this.textBoxChsFrom_EnabledChanged);
             // 
@@ -352,12 +357,14 @@
             // 
             // buttonSendEmail
             // 
+            this.buttonSendEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSendEmail.BackColor = System.Drawing.Color.AliceBlue;
             this.buttonSendEmail.Enabled = false;
             this.buttonSendEmail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSendEmail.Location = new System.Drawing.Point(3, 143);
             this.buttonSendEmail.Name = "buttonSendEmail";
-            this.buttonSendEmail.Size = new System.Drawing.Size(155, 29);
+            this.buttonSendEmail.Size = new System.Drawing.Size(170, 29);
             this.buttonSendEmail.TabIndex = 5;
             this.buttonSendEmail.Text = "Отправить на email";
             this.buttonSendEmail.UseVisualStyleBackColor = false;
@@ -365,12 +372,14 @@
             // 
             // buttonPrint
             // 
+            this.buttonPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonPrint.BackColor = System.Drawing.Color.AliceBlue;
             this.buttonPrint.Enabled = false;
             this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPrint.Location = new System.Drawing.Point(3, 108);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(155, 29);
+            this.buttonPrint.Size = new System.Drawing.Size(170, 29);
             this.buttonPrint.TabIndex = 4;
             this.buttonPrint.Text = "Печать";
             this.buttonPrint.UseVisualStyleBackColor = false;
@@ -378,12 +387,14 @@
             // 
             // buttonSaveInWord
             // 
+            this.buttonSaveInWord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSaveInWord.BackColor = System.Drawing.Color.AliceBlue;
             this.buttonSaveInWord.Enabled = false;
             this.buttonSaveInWord.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSaveInWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSaveInWord.Location = new System.Drawing.Point(3, 73);
             this.buttonSaveInWord.Name = "buttonSaveInWord";
-            this.buttonSaveInWord.Size = new System.Drawing.Size(155, 29);
+            this.buttonSaveInWord.Size = new System.Drawing.Size(170, 29);
             this.buttonSaveInWord.TabIndex = 3;
             this.buttonSaveInWord.Text = "Сохранить в word";
             this.buttonSaveInWord.UseVisualStyleBackColor = false;
@@ -391,12 +402,14 @@
             // 
             // buttonDel
             // 
+            this.buttonDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDel.BackColor = System.Drawing.Color.AliceBlue;
             this.buttonDel.Enabled = false;
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.Location = new System.Drawing.Point(3, 38);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(155, 29);
+            this.buttonDel.Size = new System.Drawing.Size(170, 29);
             this.buttonDel.TabIndex = 2;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -404,12 +417,14 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAdd.BackColor = System.Drawing.Color.AliceBlue;
             this.buttonAdd.Enabled = false;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.Location = new System.Drawing.Point(3, 3);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(155, 29);
+            this.buttonAdd.Size = new System.Drawing.Size(170, 29);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -429,7 +444,7 @@
             this.groupBoxSearch.Location = new System.Drawing.Point(179, 3);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(392, 169);
-            this.groupBoxSearch.TabIndex = 0;
+            this.groupBoxSearch.TabIndex = 2;
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Поиск";
             // 
@@ -453,7 +468,7 @@
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
             this.comboBoxSearchBy.Size = new System.Drawing.Size(149, 27);
             this.comboBoxSearchBy.Sorted = true;
-            this.comboBoxSearchBy.TabIndex = 3;
+            this.comboBoxSearchBy.TabIndex = 6;
             this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged);
             // 
             // textBoxValToSearch
@@ -464,7 +479,7 @@
             this.textBoxValToSearch.Location = new System.Drawing.Point(102, 67);
             this.textBoxValToSearch.Name = "textBoxValToSearch";
             this.textBoxValToSearch.Size = new System.Drawing.Size(149, 26);
-            this.textBoxValToSearch.TabIndex = 2;
+            this.textBoxValToSearch.TabIndex = 7;
             this.textBoxValToSearch.TextChanged += new System.EventHandler(this.textBoxValToSearch_TextChanged);
             // 
             // labelSearchValue
@@ -515,22 +530,66 @@
             this.linkLabelChangeAccount.Location = new System.Drawing.Point(8, 639);
             this.linkLabelChangeAccount.Name = "linkLabelChangeAccount";
             this.linkLabelChangeAccount.Size = new System.Drawing.Size(127, 13);
-            this.linkLabelChangeAccount.TabIndex = 5;
+            this.linkLabelChangeAccount.TabIndex = 13;
             this.linkLabelChangeAccount.TabStop = true;
             this.linkLabelChangeAccount.Text = "Сменить пользователя";
             this.linkLabelChangeAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelChangeAccount_LinkClicked);
+            // 
+            // buttonChangeFont
+            // 
+            this.buttonChangeFont.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonChangeFont.BackColor = System.Drawing.Color.AliceBlue;
+            this.buttonChangeFont.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonChangeFont.Location = new System.Drawing.Point(3, 527);
+            this.buttonChangeFont.Name = "buttonChangeFont";
+            this.buttonChangeFont.Size = new System.Drawing.Size(135, 30);
+            this.buttonChangeFont.TabIndex = 11;
+            this.buttonChangeFont.Text = "Увеличить";
+            this.buttonChangeFont.UseVisualStyleBackColor = false;
+            this.buttonChangeFont.Click += new System.EventHandler(this.buttonChangeFont_Click);
+            // 
+            // buttonAbout
+            // 
+            this.buttonAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAbout.BackColor = System.Drawing.Color.AliceBlue;
+            this.buttonAbout.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAbout.Location = new System.Drawing.Point(3, 566);
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Size = new System.Drawing.Size(135, 30);
+            this.buttonAbout.TabIndex = 12;
+            this.buttonAbout.Text = "Справка";
+            this.buttonAbout.UseVisualStyleBackColor = false;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
+            // 
+            // buttonAboutProgram
+            // 
+            this.buttonAboutProgram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAboutProgram.BackColor = System.Drawing.Color.AliceBlue;
+            this.buttonAboutProgram.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAboutProgram.Location = new System.Drawing.Point(3, 602);
+            this.buttonAboutProgram.Name = "buttonAboutProgram";
+            this.buttonAboutProgram.Size = new System.Drawing.Size(135, 30);
+            this.buttonAboutProgram.TabIndex = 14;
+            this.buttonAboutProgram.Text = "О программе";
+            this.buttonAboutProgram.UseVisualStyleBackColor = false;
+            this.buttonAboutProgram.Click += new System.EventHandler(this.buttonAboutProgram_Click);
             // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 662);
+            this.Controls.Add(this.buttonAboutProgram);
+            this.Controls.Add(this.buttonAbout);
+            this.Controls.Add(this.buttonChangeFont);
             this.Controls.Add(this.linkLabelChangeAccount);
             this.Controls.Add(this.panelInstruments);
             this.Controls.Add(this.panelWorkSpace);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Administration";
+            this.ShowIcon = false;
             this.Text = "Administration";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Administration_FormClosing);
             this.ResizeEnd += new System.EventHandler(this.Administration_ResizeEnd);
@@ -585,5 +644,8 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.LinkLabel linkLabelChangeAccount;
+        private System.Windows.Forms.Button buttonChangeFont;
+        private System.Windows.Forms.Button buttonAbout;
+        private System.Windows.Forms.Button buttonAboutProgram;
     }
 }

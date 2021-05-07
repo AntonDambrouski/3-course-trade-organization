@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TradeOrgCon")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("anton_prog.j")]
 [assembly: AssemblyProduct("TradeOrgCon")]
 [assembly: AssemblyCopyright("Copyright © anton_prog.j 2021")]
 [assembly: AssemblyTrademark("")]

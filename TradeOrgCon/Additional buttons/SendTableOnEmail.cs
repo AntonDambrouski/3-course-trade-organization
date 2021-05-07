@@ -11,7 +11,7 @@ namespace TradeOrgCon.Additional_buttons
 {
     static class SendTableOnEmail
     {
-        public static void SendEmail(DataGridView dataGridView)
+        public static void SendEmail(DataGridView dataGridView, string emailTo)
         {
             var client = new SmtpClient("smtp.gmail.com", 587);
             client.EnableSsl = true;
@@ -19,7 +19,7 @@ namespace TradeOrgCon.Additional_buttons
 
             var mail = new MailMessage();
             mail.From = new MailAddress("trade.organizationMGK@gmail.com");
-            mail.To.Add("dombrovsliy2002@mail.ru");
+            mail.To.Add(emailTo);
             mail.IsBodyHtml = true;
             mail.Subject = "Таблица с данными";
 

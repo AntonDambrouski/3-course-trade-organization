@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -377,7 +378,7 @@ namespace TradeOrgCon.Main_form
                 if (inputEmail.ShowDialog() == DialogResult.OK)
                 {
                     Additional_buttons.SendTableOnEmail.IsValidEmail(inputEmail.textBoxEmail.Text);
-                    Additional_buttons.SendTableOnEmail.SendEmail(dataGridView1);
+                    Additional_buttons.SendTableOnEmail.SendEmail(dataGridView1, inputEmail.textBoxEmail.Text);
                 }
             }
             catch (Exception ex)
@@ -429,6 +430,50 @@ namespace TradeOrgCon.Main_form
         {
             textBoxChsFrom.Clear();
             textBoxChsTo.Clear();
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
+
+        private void buttonAboutProgram_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!File.Exists("Readme.txt"))
+                {
+                    Forms_about.RestoreAboutFile.CreateReadMeFile();
+                }
+
+                System.Diagnostics.Process.Start("Readme.txt");
+            }
+            catch (Exception) {/*nothing*/};
+        }
+
+        private void buttonChangeFont_Click(object sender, EventArgs e)
+        {
+            if (buttonChangeFont.Text == "Увеличить")
+            {
+                buttonPrint.Font = buttonSaveInWord.Font = buttonSendEmail.Font = listBoxStatement.Font = new Font("Consolas", 12);
+                buttonSendEmail.Font = new Font("Consolas", 11);
+                groupBoxChsDataBy.Font = groupBoxSearch.Font = dataGridView1.Font = new Font("Consolas", 13);
+                dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Consolas", 11);
+                dataGridView1.AutoResizeColumns();
+                comboBoxSearchBy.Font = comboBoxSrchRange.Font = textBoxChsFrom.Font = textBoxChsTo.Font = textBoxValToSearch.Font = new Font("Consolas", 14);
+            }
+            else
+            {
+                buttonPrint.Font = buttonSaveInWord.Font = buttonSendEmail.Font = listBoxStatement.Font = new Font("Consolas", 10);
+                groupBoxChsDataBy.Font = groupBoxSearch.Font = new Font("Consolas", 12);
+                dataGridView1.Font = dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Consolas", 10);
+                dataGridView1.AutoResizeColumns();
+                comboBoxSearchBy.Font = comboBoxSrchRange.Font = textBoxChsFrom.Font = textBoxChsTo.Font = textBoxValToSearch.Font = new Font("Consolas", 12);
+
+            }
+
+            buttonChangeFont.Text = buttonChangeFont.Text == "Увеличить" ? "Уменьшить" : "Увеличить";
         }
     }
 }
