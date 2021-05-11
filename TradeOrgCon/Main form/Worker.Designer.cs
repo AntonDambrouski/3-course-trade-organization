@@ -54,6 +54,16 @@
             this.labelChsFrom = new System.Windows.Forms.Label();
             this.comboBoxSrchRange = new System.Windows.Forms.ComboBox();
             this.labelSearchByRange = new System.Windows.Forms.Label();
+            this.groupBoxSearch = new System.Windows.Forms.GroupBox();
+            this.listBoxStatement = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonDelStatement = new System.Windows.Forms.Button();
+            this.buttonAddStatement = new System.Windows.Forms.Button();
+            this.ErrorSearchInputlabel = new System.Windows.Forms.Label();
+            this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
+            this.labelSearchBy = new System.Windows.Forms.Label();
+            this.labelSearchValue = new System.Windows.Forms.Label();
+            this.textBoxValToSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
@@ -63,23 +73,13 @@
             this.buttonAboutProgram = new System.Windows.Forms.Button();
             this.buttonAbout = new System.Windows.Forms.Button();
             this.buttonChangeFont = new System.Windows.Forms.Button();
-            this.textBoxValToSearch = new System.Windows.Forms.TextBox();
-            this.labelSearchValue = new System.Windows.Forms.Label();
-            this.labelSearchBy = new System.Windows.Forms.Label();
-            this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
-            this.ErrorSearchInputlabel = new System.Windows.Forms.Label();
-            this.buttonAddStatement = new System.Windows.Forms.Button();
-            this.buttonDelStatement = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBoxSearch = new System.Windows.Forms.GroupBox();
-            this.listBoxStatement = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBoxMainData.SuspendLayout();
             this.groupBoxChsDataBy.SuspendLayout();
+            this.groupBoxSearch.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBoxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -204,7 +204,7 @@
             // labelMainInfo3
             // 
             this.labelMainInfo3.AutoSize = true;
-            this.labelMainInfo3.Location = new System.Drawing.Point(6, 65);
+            this.labelMainInfo3.Location = new System.Drawing.Point(6, 62);
             this.labelMainInfo3.Name = "labelMainInfo3";
             this.labelMainInfo3.Size = new System.Drawing.Size(0, 18);
             this.labelMainInfo3.TabIndex = 2;
@@ -212,7 +212,7 @@
             // labelMainInfo2
             // 
             this.labelMainInfo2.AutoSize = true;
-            this.labelMainInfo2.Location = new System.Drawing.Point(6, 50);
+            this.labelMainInfo2.Location = new System.Drawing.Point(6, 44);
             this.labelMainInfo2.Name = "labelMainInfo2";
             this.labelMainInfo2.Size = new System.Drawing.Size(0, 18);
             this.labelMainInfo2.TabIndex = 1;
@@ -220,7 +220,7 @@
             // labelMainInfo1
             // 
             this.labelMainInfo1.AutoSize = true;
-            this.labelMainInfo1.Location = new System.Drawing.Point(6, 35);
+            this.labelMainInfo1.Location = new System.Drawing.Point(6, 26);
             this.labelMainInfo1.Name = "labelMainInfo1";
             this.labelMainInfo1.Size = new System.Drawing.Size(0, 18);
             this.labelMainInfo1.TabIndex = 0;
@@ -359,6 +359,133 @@
             this.labelSearchByRange.TabIndex = 0;
             this.labelSearchByRange.Text = "Поиск по:";
             // 
+            // groupBoxSearch
+            // 
+            this.groupBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxSearch.Controls.Add(this.listBoxStatement);
+            this.groupBoxSearch.Controls.Add(this.button1);
+            this.groupBoxSearch.Controls.Add(this.buttonDelStatement);
+            this.groupBoxSearch.Controls.Add(this.buttonAddStatement);
+            this.groupBoxSearch.Controls.Add(this.ErrorSearchInputlabel);
+            this.groupBoxSearch.Controls.Add(this.comboBoxSearchBy);
+            this.groupBoxSearch.Controls.Add(this.labelSearchBy);
+            this.groupBoxSearch.Controls.Add(this.labelSearchValue);
+            this.groupBoxSearch.Controls.Add(this.textBoxValToSearch);
+            this.groupBoxSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBoxSearch.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBoxSearch.Location = new System.Drawing.Point(479, 6);
+            this.groupBoxSearch.Name = "groupBoxSearch";
+            this.groupBoxSearch.Size = new System.Drawing.Size(515, 211);
+            this.groupBoxSearch.TabIndex = 7;
+            this.groupBoxSearch.TabStop = false;
+            this.groupBoxSearch.Text = "Поиск";
+            // 
+            // listBoxStatement
+            // 
+            this.listBoxStatement.BackColor = System.Drawing.Color.AliceBlue;
+            this.listBoxStatement.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxStatement.FormattingEnabled = true;
+            this.listBoxStatement.HorizontalScrollbar = true;
+            this.listBoxStatement.ItemHeight = 15;
+            this.listBoxStatement.Location = new System.Drawing.Point(254, 18);
+            this.listBoxStatement.Name = "listBoxStatement";
+            this.listBoxStatement.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxStatement.Size = new System.Drawing.Size(255, 184);
+            this.listBoxStatement.Sorted = true;
+            this.listBoxStatement.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.AliceBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(34, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 30);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Очистить";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonDelStatement
+            // 
+            this.buttonDelStatement.BackColor = System.Drawing.Color.AliceBlue;
+            this.buttonDelStatement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDelStatement.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDelStatement.Location = new System.Drawing.Point(34, 140);
+            this.buttonDelStatement.Name = "buttonDelStatement";
+            this.buttonDelStatement.Size = new System.Drawing.Size(173, 30);
+            this.buttonDelStatement.TabIndex = 10;
+            this.buttonDelStatement.Text = "Удалить условие";
+            this.buttonDelStatement.UseVisualStyleBackColor = false;
+            this.buttonDelStatement.Click += new System.EventHandler(this.buttonDelStatement_Click);
+            // 
+            // buttonAddStatement
+            // 
+            this.buttonAddStatement.BackColor = System.Drawing.Color.AliceBlue;
+            this.buttonAddStatement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAddStatement.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddStatement.Location = new System.Drawing.Point(34, 104);
+            this.buttonAddStatement.Name = "buttonAddStatement";
+            this.buttonAddStatement.Size = new System.Drawing.Size(173, 30);
+            this.buttonAddStatement.TabIndex = 9;
+            this.buttonAddStatement.Text = "Добавить условие";
+            this.buttonAddStatement.UseVisualStyleBackColor = false;
+            this.buttonAddStatement.Click += new System.EventHandler(this.buttonAddStatement_Click);
+            // 
+            // ErrorSearchInputlabel
+            // 
+            this.ErrorSearchInputlabel.AutoSize = true;
+            this.ErrorSearchInputlabel.BackColor = System.Drawing.Color.AliceBlue;
+            this.ErrorSearchInputlabel.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ErrorSearchInputlabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.ErrorSearchInputlabel.Location = new System.Drawing.Point(30, 85);
+            this.ErrorSearchInputlabel.Name = "ErrorSearchInputlabel";
+            this.ErrorSearchInputlabel.Size = new System.Drawing.Size(0, 15);
+            this.ErrorSearchInputlabel.TabIndex = 4;
+            // 
+            // comboBoxSearchBy
+            // 
+            this.comboBoxSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSearchBy.Enabled = false;
+            this.comboBoxSearchBy.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxSearchBy.FormattingEnabled = true;
+            this.comboBoxSearchBy.Location = new System.Drawing.Point(116, 23);
+            this.comboBoxSearchBy.Name = "comboBoxSearchBy";
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxSearchBy.TabIndex = 3;
+            this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged);
+            // 
+            // labelSearchBy
+            // 
+            this.labelSearchBy.AutoSize = true;
+            this.labelSearchBy.Location = new System.Drawing.Point(6, 26);
+            this.labelSearchBy.Name = "labelSearchBy";
+            this.labelSearchBy.Size = new System.Drawing.Size(90, 19);
+            this.labelSearchBy.TabIndex = 0;
+            this.labelSearchBy.Text = "Поиск по:";
+            // 
+            // labelSearchValue
+            // 
+            this.labelSearchValue.AutoSize = true;
+            this.labelSearchValue.Location = new System.Drawing.Point(6, 60);
+            this.labelSearchValue.Name = "labelSearchValue";
+            this.labelSearchValue.Size = new System.Drawing.Size(90, 19);
+            this.labelSearchValue.TabIndex = 1;
+            this.labelSearchValue.Text = "Значение:";
+            // 
+            // textBoxValToSearch
+            // 
+            this.textBoxValToSearch.BackColor = System.Drawing.Color.AliceBlue;
+            this.textBoxValToSearch.Enabled = false;
+            this.textBoxValToSearch.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxValToSearch.Location = new System.Drawing.Point(116, 58);
+            this.textBoxValToSearch.MaxLength = 50;
+            this.textBoxValToSearch.Name = "textBoxValToSearch";
+            this.textBoxValToSearch.Size = new System.Drawing.Size(121, 25);
+            this.textBoxValToSearch.TabIndex = 2;
+            this.textBoxValToSearch.TextChanged += new System.EventHandler(this.textBoxValToSearch_TextChanged);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
@@ -477,133 +604,6 @@
             this.buttonChangeFont.UseVisualStyleBackColor = false;
             this.buttonChangeFont.Click += new System.EventHandler(this.buttonChangeFont_Click);
             // 
-            // textBoxValToSearch
-            // 
-            this.textBoxValToSearch.BackColor = System.Drawing.Color.AliceBlue;
-            this.textBoxValToSearch.Enabled = false;
-            this.textBoxValToSearch.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxValToSearch.Location = new System.Drawing.Point(116, 58);
-            this.textBoxValToSearch.MaxLength = 50;
-            this.textBoxValToSearch.Name = "textBoxValToSearch";
-            this.textBoxValToSearch.Size = new System.Drawing.Size(121, 25);
-            this.textBoxValToSearch.TabIndex = 2;
-            this.textBoxValToSearch.TextChanged += new System.EventHandler(this.textBoxValToSearch_TextChanged);
-            // 
-            // labelSearchValue
-            // 
-            this.labelSearchValue.AutoSize = true;
-            this.labelSearchValue.Location = new System.Drawing.Point(6, 60);
-            this.labelSearchValue.Name = "labelSearchValue";
-            this.labelSearchValue.Size = new System.Drawing.Size(90, 19);
-            this.labelSearchValue.TabIndex = 1;
-            this.labelSearchValue.Text = "Значение:";
-            // 
-            // labelSearchBy
-            // 
-            this.labelSearchBy.AutoSize = true;
-            this.labelSearchBy.Location = new System.Drawing.Point(6, 26);
-            this.labelSearchBy.Name = "labelSearchBy";
-            this.labelSearchBy.Size = new System.Drawing.Size(90, 19);
-            this.labelSearchBy.TabIndex = 0;
-            this.labelSearchBy.Text = "Поиск по:";
-            // 
-            // comboBoxSearchBy
-            // 
-            this.comboBoxSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSearchBy.Enabled = false;
-            this.comboBoxSearchBy.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxSearchBy.FormattingEnabled = true;
-            this.comboBoxSearchBy.Location = new System.Drawing.Point(116, 23);
-            this.comboBoxSearchBy.Name = "comboBoxSearchBy";
-            this.comboBoxSearchBy.Size = new System.Drawing.Size(121, 26);
-            this.comboBoxSearchBy.TabIndex = 3;
-            this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged);
-            // 
-            // ErrorSearchInputlabel
-            // 
-            this.ErrorSearchInputlabel.AutoSize = true;
-            this.ErrorSearchInputlabel.BackColor = System.Drawing.Color.AliceBlue;
-            this.ErrorSearchInputlabel.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ErrorSearchInputlabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.ErrorSearchInputlabel.Location = new System.Drawing.Point(30, 85);
-            this.ErrorSearchInputlabel.Name = "ErrorSearchInputlabel";
-            this.ErrorSearchInputlabel.Size = new System.Drawing.Size(0, 15);
-            this.ErrorSearchInputlabel.TabIndex = 4;
-            // 
-            // buttonAddStatement
-            // 
-            this.buttonAddStatement.BackColor = System.Drawing.Color.AliceBlue;
-            this.buttonAddStatement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAddStatement.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddStatement.Location = new System.Drawing.Point(34, 104);
-            this.buttonAddStatement.Name = "buttonAddStatement";
-            this.buttonAddStatement.Size = new System.Drawing.Size(173, 30);
-            this.buttonAddStatement.TabIndex = 9;
-            this.buttonAddStatement.Text = "Добавить условие";
-            this.buttonAddStatement.UseVisualStyleBackColor = false;
-            this.buttonAddStatement.Click += new System.EventHandler(this.buttonAddStatement_Click);
-            // 
-            // buttonDelStatement
-            // 
-            this.buttonDelStatement.BackColor = System.Drawing.Color.AliceBlue;
-            this.buttonDelStatement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDelStatement.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDelStatement.Location = new System.Drawing.Point(34, 140);
-            this.buttonDelStatement.Name = "buttonDelStatement";
-            this.buttonDelStatement.Size = new System.Drawing.Size(173, 30);
-            this.buttonDelStatement.TabIndex = 10;
-            this.buttonDelStatement.Text = "Удалить условие";
-            this.buttonDelStatement.UseVisualStyleBackColor = false;
-            this.buttonDelStatement.Click += new System.EventHandler(this.buttonDelStatement_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.AliceBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(34, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 30);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Очистить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // groupBoxSearch
-            // 
-            this.groupBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxSearch.Controls.Add(this.listBoxStatement);
-            this.groupBoxSearch.Controls.Add(this.button1);
-            this.groupBoxSearch.Controls.Add(this.buttonDelStatement);
-            this.groupBoxSearch.Controls.Add(this.buttonAddStatement);
-            this.groupBoxSearch.Controls.Add(this.ErrorSearchInputlabel);
-            this.groupBoxSearch.Controls.Add(this.comboBoxSearchBy);
-            this.groupBoxSearch.Controls.Add(this.labelSearchBy);
-            this.groupBoxSearch.Controls.Add(this.labelSearchValue);
-            this.groupBoxSearch.Controls.Add(this.textBoxValToSearch);
-            this.groupBoxSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBoxSearch.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBoxSearch.Location = new System.Drawing.Point(479, 6);
-            this.groupBoxSearch.Name = "groupBoxSearch";
-            this.groupBoxSearch.Size = new System.Drawing.Size(515, 211);
-            this.groupBoxSearch.TabIndex = 7;
-            this.groupBoxSearch.TabStop = false;
-            this.groupBoxSearch.Text = "Поиск";
-            // 
-            // listBoxStatement
-            // 
-            this.listBoxStatement.BackColor = System.Drawing.Color.AliceBlue;
-            this.listBoxStatement.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listBoxStatement.FormattingEnabled = true;
-            this.listBoxStatement.HorizontalScrollbar = true;
-            this.listBoxStatement.ItemHeight = 15;
-            this.listBoxStatement.Location = new System.Drawing.Point(254, 18);
-            this.listBoxStatement.Name = "listBoxStatement";
-            this.listBoxStatement.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxStatement.Size = new System.Drawing.Size(255, 184);
-            this.listBoxStatement.Sorted = true;
-            this.listBoxStatement.TabIndex = 12;
-            // 
             // Worker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,10 +634,10 @@
             this.groupBoxMainData.PerformLayout();
             this.groupBoxChsDataBy.ResumeLayout(false);
             this.groupBoxChsDataBy.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

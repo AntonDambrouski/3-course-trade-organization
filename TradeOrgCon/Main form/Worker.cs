@@ -323,7 +323,7 @@ namespace TradeOrgCon.Main_form
             if (торговаяТочкаToolStripMenuItem.Checked)
             {
                 labelMainInfo2.Text = "Объема продаж к числу торговых залов: " + Main_form.CountingMainParametrs.GetVDivOnCountOfPlaces(dataGridView1);
-                labelMainInfo3.Text = "Рентабельность(объема продаж / оклад продавцов): " + Main_form.CountingMainParametrs.GetProfitability(dataGridView1);
+                labelMainInfo3.Text = "Рентабельность: " + Main_form.CountingMainParametrs.GetProfitability(dataGridView1);
                 labelMainInfo4.Text = "Товарооборот: " + Main_form.CountingMainParametrs.GetTurnover(dataGridView1);
             }
 
@@ -456,10 +456,10 @@ namespace TradeOrgCon.Main_form
         {
             if (buttonChangeFont.Text == "Увеличить")
             {
-                buttonPrint.Font = buttonSaveInWord.Font = buttonSendEmail.Font = listBoxStatement.Font = new Font("Consolas", 12);
+                groupBoxMainData.Font = buttonPrint.Font = buttonSaveInWord.Font = buttonSendEmail.Font = listBoxStatement.Font = new Font("Consolas", 12);
                 buttonSendEmail.Font = new Font("Consolas", 11);
                 groupBoxChsDataBy.Font = groupBoxSearch.Font = dataGridView1.Font = new Font("Consolas", 13);
-                dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Consolas", 11);
+                dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Consolas", 9);
                 dataGridView1.AutoResizeColumns();
                 comboBoxSearchBy.Font = comboBoxSrchRange.Font = textBoxChsFrom.Font = textBoxChsTo.Font = textBoxValToSearch.Font = new Font("Consolas", 14);
             }
@@ -467,8 +467,9 @@ namespace TradeOrgCon.Main_form
             {
                 buttonPrint.Font = buttonSaveInWord.Font = buttonSendEmail.Font = listBoxStatement.Font = new Font("Consolas", 10);
                 groupBoxChsDataBy.Font = groupBoxSearch.Font = new Font("Consolas", 12);
-                dataGridView1.Font = dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Consolas", 10);
+                dataGridView1.Font = dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Consolas", 9);
                 dataGridView1.AutoResizeColumns();
+                groupBoxMainData.Font = new Font("Consolas", 11);
                 comboBoxSearchBy.Font = comboBoxSrchRange.Font = textBoxChsFrom.Font = textBoxChsTo.Font = textBoxValToSearch.Font = new Font("Consolas", 12);
 
             }
