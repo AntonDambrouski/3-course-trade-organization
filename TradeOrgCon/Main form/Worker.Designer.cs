@@ -344,7 +344,7 @@
             this.comboBoxSrchRange.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSrchRange.Enabled = false;
             this.comboBoxSrchRange.FormattingEnabled = true;
-            this.comboBoxSrchRange.Location = new System.Drawing.Point(92, 29);
+            this.comboBoxSrchRange.Location = new System.Drawing.Point(100, 29);
             this.comboBoxSrchRange.Name = "comboBoxSrchRange";
             this.comboBoxSrchRange.Size = new System.Drawing.Size(121, 26);
             this.comboBoxSrchRange.TabIndex = 4;

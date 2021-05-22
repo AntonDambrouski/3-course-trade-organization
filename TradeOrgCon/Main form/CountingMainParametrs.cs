@@ -46,13 +46,19 @@ namespace TradeOrgCon.Main_form
         public static string GetProfitability(DataGridView dataGridView1)
         {
             double V_sales = 0, salary = 0;
+            Dictionary<int, int> sallerAndTheirSalary = new Dictionary<int, int>();
             foreach (DataGridViewRow item in dataGridView1.Rows)
             {
                 V_sales += int.Parse(item.Cells["Количество"].Value.ToString());
-                salary += int.Parse(item.Cells["Оклад"].Value.ToString());
+                sallerAndTheirSalary[int.Parse(item.Cells["Id_продавца"].Value.ToString())] = int.Parse(item.Cells["Оклад"].Value.ToString());
             }
 
-            return salary == 0 ? "0" : Math.Round(V_sales / salary, 2).ToString();
+            foreach (var item in sallerAndTheirSalary.Values)
+            {
+                salary += item;
+            }
+
+            return salary == 0 ? "0" : Math.Round(V_sales / salary, 4).ToString();
         }
 
         public static string GetVDivOnCountOfPlaces(DataGridView dataGridView1)

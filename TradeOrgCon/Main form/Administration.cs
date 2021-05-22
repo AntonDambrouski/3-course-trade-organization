@@ -66,7 +66,7 @@ namespace TradeOrgCon.Main_form
         {
             try
             {
-                LoadSearchAndChooseInfoByClickButton.LoadSuppliers(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
+                LoadAdminFormByChoosingButton.LoadSuppliers(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
                 LoadSearchAndRangeBoxes(searchBy, rangeBy);
             }
             catch (Exception ex)
@@ -92,7 +92,7 @@ namespace TradeOrgCon.Main_form
         {
             try
             {
-                LoadSearchAndChooseInfoByClickButton.LoadSellers(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
+                LoadAdminFormByChoosingButton.LoadSellers(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
                 LoadSearchAndRangeBoxes(searchBy, rangeBy);
             }
             catch (Exception ex)
@@ -105,7 +105,7 @@ namespace TradeOrgCon.Main_form
         {
             try
             {
-                LoadSearchAndChooseInfoByClickButton.LoadRequest(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
+                LoadAdminFormByChoosingButton.LoadRequest(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
                 LoadSearchAndRangeBoxes(searchBy, rangeBy);
             }
             catch (Exception ex)
@@ -118,7 +118,7 @@ namespace TradeOrgCon.Main_form
         {
             try
             {
-                LoadSearchAndChooseInfoByClickButton.LoadTradeOrganization(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
+                LoadAdminFormByChoosingButton.LoadTradeOrganization(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
                 LoadSearchAndRangeBoxes(searchBy, rangeBy);
             }
             catch (Exception ex)
@@ -131,7 +131,7 @@ namespace TradeOrgCon.Main_form
         {
             try
             {
-                LoadSearchAndChooseInfoByClickButton.LoadStore(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
+                LoadAdminFormByChoosingButton.LoadStore(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
                 LoadSearchAndRangeBoxes(searchBy, rangeBy);
             }
             catch (Exception ex)
@@ -144,7 +144,7 @@ namespace TradeOrgCon.Main_form
         {
             try
             {
-                LoadSearchAndChooseInfoByClickButton.LoadSales(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
+                LoadAdminFormByChoosingButton.LoadSales(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
                 LoadSearchAndRangeBoxes(searchBy, rangeBy);
             }
             catch (Exception ex)
@@ -157,7 +157,7 @@ namespace TradeOrgCon.Main_form
         {
             try
             {
-                LoadSearchAndChooseInfoByClickButton.LoadClients(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
+                LoadAdminFormByChoosingButton.LoadClients(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
                 LoadSearchAndRangeBoxes(searchBy, rangeBy);
             }
             catch (Exception ex)
@@ -171,7 +171,7 @@ namespace TradeOrgCon.Main_form
             buttonPrint.Enabled = buttonSaveInWord.Enabled = buttonSendEmail.Enabled = false;
             try
             {
-                LoadSearchAndChooseInfoByClickButton.LoadUserAccounts(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
+                LoadAdminFormByChoosingButton.LoadUserAccounts(this.dataGridView1, out string[] searchBy, out string[] rangeBy);
                 LoadSearchAndRangeBoxes(searchBy, rangeBy);
                 dataGridView1.ReadOnly = false;
             }
@@ -391,7 +391,7 @@ namespace TradeOrgCon.Main_form
 
         private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            LoadSearchAndChooseInfoByClickButton.SaveChanges();
+            LoadAdminFormByChoosingButton.SaveChanges();
         }
 
         private void Administration_ResizeEnd(object sender, EventArgs e)

@@ -155,7 +155,7 @@
       <DependentUpon>Administration.cs</DependentUpon>
     </Compile>
     <Compile Include="Main form\CountingMainParametrs.cs" />
-    <Compile Include="Main form\LoadSearchAndChooseInfoByClickButton.cs" />
+    <Compile Include="Main form\LoadAdminFormByChoosingButton.cs" />
     <Compile Include="Main form\LoadWorkerFormByChoosingButton.cs" />
     <Compile Include="Main form\Worker.cs">
       <SubType>Form</SubType>
