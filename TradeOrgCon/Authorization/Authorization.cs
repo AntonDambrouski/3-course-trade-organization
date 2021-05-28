@@ -20,55 +20,65 @@ namespace TradeOrgCon.Authorization
             InitializeComponent();
         }
 
-        private void buttonEnter_Click(object sender, EventArgs e)
+        private async void CheckInputDataInBD()
         {
-            try
+            string type = await Task.Run(() =>
             {
-                CheckInputAndLoadForm.CheckInputFields(textBoxLogin.Text.Length, textBoxPassword.Text.Length);
-                string type = CheckInputAndLoadForm.CheckInputDataReturnType(textBoxLogin.Text, textBoxPassword.Text);
-                if (type == "adm")
+                try
                 {
-                    this.Hide();
-                    administration = new Main_form.Administration();
-                    administration.Show();
+                    CheckInputAndLoadForm.CheckInputFields(textBoxLogin.Text.Length, textBoxPassword.Text.Length);
+                    return CheckInputAndLoadForm.CheckInputDataReturnType(textBoxLogin.Text, textBoxPassword.Text);
                 }
-
-                if (type == "wrk")
-                {
-                    worker = new Main_form.Worker();
-                    this.Hide();
-                    worker.Show();
-                }
-            }
-            catch (ArgumentException ex)
-            {
-                if (ex.ParamName == "login")
-                {
-                    labelErrorLogin.Text = "Неверный логин";
-                }
-                else if (ex.ParamName == "password")
-                {
-                    labelErrorPassw.Text = "Неверный пароль";
-                }
-                else
+                catch (ArgumentException ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    return string.Empty;
                 }
-            }
-            catch (Exception ex)
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return string.Empty;
+                }
+            });
+
+            animator.StopDrawing();
+            ChangeEnabledOfControl(true);
+            if (type == "adm")
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Hide();
+                administration = new Main_form.Administration();
+                administration.Show();
+            }
+
+            if (type == "wrk")
+            {
+                worker = new Main_form.Worker();
+                this.Hide();
+                worker.Show();
             }
         }
+
+        private void ChangeEnabledOfControl(bool enabled)
+        {
+            foreach (Control elem in this.Controls)
+            {
+                elem.Enabled = enabled;
+            }
+        }
+
+        Main_form.LoadAnimator animator = null;
+        private void buttonEnter_Click(object sender, EventArgs e)
+        {
+            ChangeEnabledOfControl(false);
+            CheckInputDataInBD();
+            animator = new Main_form.LoadAnimator(this, Graphics.FromHwnd(this.Handle));
+            animator.StartAnimation();
+        }
+
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
-        }
-
-        private void Authorization_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void linkLabelRegistr_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -85,12 +95,6 @@ namespace TradeOrgCon.Authorization
         private void linkLabelForgotPassw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Для восстановления пароля обратитесь к администратору!", "Восстановление пароля", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
-
-        private void textBoxLogin_Enter(object sender, EventArgs e)
-        {
-            labelErrorLogin.Text = string.Empty;
-            labelErrorPassw.Text = string.Empty;
         }
 
         private void labelShowPassw_Click(object sender, EventArgs e)

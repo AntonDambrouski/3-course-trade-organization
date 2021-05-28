@@ -156,6 +156,7 @@
     </Compile>
     <Compile Include="Main form\CountingMainParametrs.cs" />
     <Compile Include="Main form\LoadAdminFormByChoosingButton.cs" />
+    <Compile Include="Main form\LoadAnimator.cs" />
     <Compile Include="Main form\LoadWorkerFormByChoosingButton.cs" />
     <Compile Include="Main form\Worker.cs">
       <SubType>Form</SubType>

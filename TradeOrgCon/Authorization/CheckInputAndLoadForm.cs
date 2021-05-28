@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace TradeOrgCon.Authorization
 {
@@ -61,12 +62,12 @@ namespace TradeOrgCon.Authorization
                     }
                     else
                     {
-                        throw new ArgumentException("Неверный пароль", "password");
+                        throw new ArgumentException("Неверный логин или пароль");
                     }
                 }
                 else
                 {
-                    throw new ArgumentException("Неверный логин", "login");
+                    throw new ArgumentException("Неверный логин или пароль");
                 }
             }
             catch (ArgumentException ex)

@@ -37,8 +37,6 @@
             this.linkLabelForgotPassw = new System.Windows.Forms.LinkLabel();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.labelErrorPassw = new System.Windows.Forms.Label();
-            this.labelErrorLogin = new System.Windows.Forms.Label();
             this.labelShowPassw = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -70,7 +68,6 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(214, 26);
             this.textBoxPassword.TabIndex = 1;
-            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxLogin_Enter);
             // 
             // textBoxLogin
             // 
@@ -79,7 +76,6 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(214, 26);
             this.textBoxLogin.TabIndex = 0;
-            this.textBoxLogin.Enter += new System.EventHandler(this.textBoxLogin_Enter);
             // 
             // linkLabelRegistr
             // 
@@ -93,7 +89,6 @@
             this.linkLabelRegistr.TabStop = true;
             this.linkLabelRegistr.Text = "Регистрация";
             this.linkLabelRegistr.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegistr_LinkClicked);
-            this.linkLabelRegistr.Enter += new System.EventHandler(this.textBoxLogin_Enter);
             // 
             // linkLabelForgotPassw
             // 
@@ -107,7 +102,6 @@
             this.linkLabelForgotPassw.TabStop = true;
             this.linkLabelForgotPassw.Text = "Забыли пароль?";
             this.linkLabelForgotPassw.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelForgotPassw_LinkClicked);
-            this.linkLabelForgotPassw.Enter += new System.EventHandler(this.textBoxLogin_Enter);
             // 
             // buttonEnter
             // 
@@ -119,7 +113,6 @@
             this.buttonEnter.Text = "Войти";
             this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
-            this.buttonEnter.Enter += new System.EventHandler(this.textBoxLogin_Enter);
             // 
             // buttonExit
             // 
@@ -130,29 +123,6 @@
             this.buttonExit.TabIndex = 3;
             this.buttonExit.Text = "Выйти";
             this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // labelErrorPassw
-            // 
-            this.labelErrorPassw.AutoSize = true;
-            this.labelErrorPassw.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelErrorPassw.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelErrorPassw.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelErrorPassw.Location = new System.Drawing.Point(120, 84);
-            this.labelErrorPassw.Name = "labelErrorPassw";
-            this.labelErrorPassw.Size = new System.Drawing.Size(0, 14);
-            this.labelErrorPassw.TabIndex = 6;
-            // 
-            // labelErrorLogin
-            // 
-            this.labelErrorLogin.AutoSize = true;
-            this.labelErrorLogin.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelErrorLogin.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelErrorLogin.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelErrorLogin.Location = new System.Drawing.Point(120, 39);
-            this.labelErrorLogin.Name = "labelErrorLogin";
-            this.labelErrorLogin.Size = new System.Drawing.Size(0, 14);
-            this.labelErrorLogin.TabIndex = 7;
             // 
             // labelShowPassw
             // 
@@ -175,8 +145,6 @@
             this.ClientSize = new System.Drawing.Size(318, 161);
             this.ControlBox = false;
             this.Controls.Add(this.labelShowPassw);
-            this.Controls.Add(this.labelErrorLogin);
-            this.Controls.Add(this.labelErrorPassw);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.linkLabelForgotPassw);
@@ -208,8 +176,6 @@
         private System.Windows.Forms.LinkLabel linkLabelForgotPassw;
         private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Label labelErrorPassw;
-        private System.Windows.Forms.Label labelErrorLogin;
         private System.Windows.Forms.Label labelShowPassw;
     }
 }
